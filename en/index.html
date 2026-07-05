@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GreenWitcher — Gardens in the Japanese spirit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+.gw-page{
+    --sage:#E9F0E2;
+    --sage-deep:#DCE7D2;
+    --paper:#F6F4EA;
+    --ink:#1E2A22;
+    --ink-soft:#4A5248;
+    --brand:#266A55;
+    --brand-dark:#173A2D;
+    --forest:#1F4A38;
+    --stone:#8B9184;
+    --stone-line: rgba(30,42,34,0.14);
+    --gold:#B99B5B;
+    --radius: 2px;
+  }.gw-page *{box-sizing:border-box;}.gw-page{scroll-behavior:smooth;}.gw-page{
+    margin:0;
+    background:var(--sage);
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    font-weight:400;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }.gw-page h1, .gw-page h2, .gw-page h3, .gw-page .mincho{
+    font-family:'Shippori Mincho', serif;
+    font-weight:600;
+    margin:0;
+    color:var(--ink);
+  }.gw-page a{color:inherit; text-decoration:none;}.gw-page img{max-width:100%; display:block;}.gw-page .wrap{max-width:1180px; margin:0 auto; padding:0 40px;}.gw-page /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(233,240,226,0.9);
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid var(--stone-line);
+  }.gw-page .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 40px;
+    max-width:1180px; margin:0 auto;
+  }.gw-page .logo img{height:52px; width:auto;}.gw-page nav.menu{display:flex; gap:44px; align-items:center;}.gw-page nav.menu a{
+    font-size:14px; letter-spacing:0.06em;
+    position:relative; padding-bottom:4px;
+    color:var(--ink-soft);
+    transition:color .25s ease;
+  }.gw-page nav.menu a::after{
+    content:"";
+    position:absolute; left:0; bottom:0;
+    width:0; height:1px; background:var(--gold);
+    transition:width .3s ease;
+  }.gw-page nav.menu a:hover{color:var(--ink);}.gw-page nav.menu a:hover::after{width:100%;}.gw-page .nav-cta{
+    font-size:13px; letter-spacing:0.05em;
+    border:1px solid var(--brand);
+    color:var(--brand-dark);
+    padding:9px 20px;
+    border-radius: var(--radius);
+    transition: all .25s ease;
+  }.gw-page .nav-cta:hover{background:var(--brand); border-color:var(--brand); color:#fff;}.gw-page /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:640px;
+    display:flex; align-items:flex-end;
+    background-image:
+      linear-gradient(180deg, rgba(6,12,9,0.45) 0%, rgba(5,10,7,0.88) 90%),
+      url('../assets/images/gw-image-01-b2b0479b.jpg');
+    background-size:cover; background-position:center 30%;
+    color:#fff;
+  }.gw-page .hero-inner{
+    max-width:1180px; margin:0 auto; padding:0 40px 72px;
+    width:100%;
+  }.gw-page .hero-eyebrow{
+    display:flex; align-items:center; gap:14px;
+    font-size:12px; letter-spacing:0.3em; text-transform:uppercase;
+    color:#CFE0C8; margin-bottom:22px;
+  }.gw-page .hero-eyebrow .rule{width:36px; height:1px; background:#CFE0C8;}.gw-page .hero h1{
+    font-size:clamp(34px, 4.4vw, 58px);
+    line-height:1.2;
+    max-width:820px;
+    color:#fff;
+  }.gw-page .hero h1 em{font-style:normal; color:#B7D8A8;}.gw-page .hero p.lede{
+    max-width:460px; margin-top:22px;
+    color:#E4EBDD; font-size:16px;
+  }.gw-page .hero-actions{display:flex; gap:18px; margin-top:36px; align-items:center;}.gw-page .btn-primary{
+    background:var(--brand); color:#fff;
+    padding:15px 30px; font-size:14px; letter-spacing:0.05em;
+    border-radius:var(--radius);
+    transition:background .25s ease;
+    display:inline-block;
+  }.gw-page .btn-primary:hover{background:var(--brand-dark);}.gw-page .btn-ghost{
+    font-size:14px; letter-spacing:0.03em;
+    border-bottom:1px solid #fff;
+    padding-bottom:3px; color:#fff;
+  }.gw-page /* ---------- SECTION SHELL ---------- */
+  section{position:relative; z-index:2;}.gw-page .section-pad{padding:110px 40px;}.gw-page .divider{max-width:1180px; margin:0 auto; border:none; border-top:1px solid var(--stone-line);}.gw-page .section-head{
+    display:grid; grid-template-columns: 60px 1fr auto;
+    gap:28px; align-items:end;
+    margin-bottom:60px;
+  }.gw-page .section-head .num{color:var(--stone); font-size:12px; letter-spacing:0.25em;}.gw-page .section-head h2{font-size:clamp(28px,3vw,42px);}.gw-page .section-head .desc{max-width:340px; color:var(--ink-soft); font-size:15px; justify-self:end; text-align:right;}.gw-page /* ---------- SERVICES ---------- */
+  .services{background:var(--sage-deep);}.gw-page .service-grid{
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--stone-line);
+    border:1px solid var(--stone-line);
+  }.gw-page .service-card{
+    background:var(--sage-deep);
+    padding:44px 34px;
+    position:relative;
+    transition: background .3s ease;
+    min-height:300px;
+    display:flex; flex-direction:column;
+  }.gw-page .service-card:hover{background:var(--paper);}.gw-page .service-card .icon{width:44px; height:44px; margin-bottom:24px; color:var(--brand);}.gw-page .service-card h3{font-size:20px; margin-bottom:12px;}.gw-page .service-card p{color:var(--ink-soft); font-size:14.5px; margin:0 0 20px; flex:1;}.gw-page .service-card .go{font-size:13px; letter-spacing:0.05em; color:var(--brand); border-bottom:1px solid transparent;}.gw-page .service-card:hover .go{border-color:var(--brand);}.gw-page .service-card .mark{position:absolute; top:38px; right:34px; font-family:'Shippori Mincho',serif; font-size:12px; color:var(--stone);}.gw-page .checklist-row{
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--stone-line); border-left:1px solid var(--stone-line); border-right:1px solid var(--stone-line); border-bottom:1px solid var(--stone-line);
+  }.gw-page .check-item{
+    background:var(--paper);
+    padding:26px 24px;
+    display:flex; align-items:center; gap:12px;
+    font-size:13.5px; color:var(--ink-soft);
+  }.gw-page .check-item svg{flex-shrink:0; width:18px; height:18px; color:var(--gold);}.gw-page /* ---------- PROJECTS ---------- */
+  .project-feature{
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;
+    padding-bottom:90px;
+  }.gw-page .project-feature img{border-radius:var(--radius); width:100%; aspect-ratio:4/3.6; object-fit:cover;}.gw-page .project-meta{display:flex; gap:10px; align-items:baseline; margin-bottom:14px;}.gw-page .project-meta .tag{font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);}.gw-page .project-meta .year{font-size:12px; color:var(--stone);}.gw-page .project-feature h3{font-size:28px; margin-bottom:16px;}.gw-page .project-feature p{color:var(--ink-soft); font-size:15px; max-width:440px; margin-bottom:10px;}.gw-page .spec-list{list-style:none; padding:0; margin:22px 0 0;}.gw-page .spec-list li{font-size:14px; color:var(--ink-soft); padding:9px 0; border-top:1px solid var(--stone-line); display:flex; justify-content:space-between;}.gw-page .spec-list li span:first-child{color:var(--stone); font-size:12px; text-transform:uppercase; letter-spacing:0.05em;}.gw-page .spec-list li a{color:var(--brand); border-bottom:1px solid var(--brand);}.gw-page .feature-pills{display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:20px;}.gw-page .feature-pills span{
+    display:flex; align-items:center; gap:7px;
+    font-size:12.5px; color:var(--ink-soft);
+  }.gw-page .feature-pills svg{width:14px; height:14px; color:var(--gold); flex-shrink:0;}.gw-page .pond-banner{max-width:1180px; margin:0 auto 90px; position:relative;}.gw-page .pond-banner img{width:100%; border-radius:var(--radius);}.gw-page .pond-banner .cap{
+    display:flex; justify-content:space-between; margin-top:16px;
+    font-size:13px; color:var(--ink-soft);
+  }.gw-page .pond-banner .cap .tag{color:var(--gold); letter-spacing:0.1em; text-transform:uppercase; font-size:11px;}.gw-page .gallery-grid{
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+  }.gw-page .gallery-grid figure{margin:0;}.gw-page .gallery-grid img{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--radius);}.gw-page .gallery-grid figcaption{margin-top:12px; font-size:13px; color:var(--stone);}.gw-page /* ---------- PHILOSOPHY ---------- */
+  .philosophy{
+    position:relative;
+    background-image:
+      linear-gradient(180deg, rgba(10,18,13,0.55), rgba(10,18,13,0.75)),
+      url('../assets/images/gw-image-02-8f705972.jpg');
+    background-size:cover; background-position:center;
+    color:#fff;
+    padding:120px 40px; text-align:center;
+  }.gw-page .philosophy p.quote{
+    font-family:'Shippori Mincho',serif;
+    font-size:clamp(22px,2.6vw,34px);
+    max-width:820px; margin:0 auto; line-height:1.5;
+  }.gw-page .philosophy .signoff{margin-top:28px; font-size:12px; letter-spacing:0.3em; color:#CFE0C8;}.gw-page /* ---------- CONTACT ---------- */
+  .contact-grid{
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:1fr 1fr; gap:80px;
+  }.gw-page .contact-info h2{font-size:clamp(30px,3.4vw,44px); margin-bottom:24px;}.gw-page .contact-info p{color:var(--ink-soft); max-width:380px; margin-bottom:36px;}.gw-page .info-line{display:flex; gap:16px; padding:16px 0; border-top:1px solid var(--stone-line); font-size:14.5px;}.gw-page .info-line:last-child{border-bottom:1px solid var(--stone-line);}.gw-page .info-line .label{width:90px; color:var(--stone); letter-spacing:0.05em; font-size:12px; text-transform:uppercase; padding-top:2px;}.gw-page form{display:flex; flex-direction:column; gap:22px;}.gw-page .field{display:flex; flex-direction:column; gap:8px;}.gw-page .field label{font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--stone);}.gw-page .field input, .gw-page .field textarea{
+    background:transparent; border:none; border-bottom:1px solid var(--stone-line);
+    padding:10px 2px; font-family:inherit; font-size:15px; color:var(--ink); outline:none;
+  }.gw-page .field input:focus, .gw-page .field textarea:focus{border-color:var(--brand);}.gw-page .submit-btn{
+    align-self:flex-start; margin-top:10px;
+    background:var(--brand); color:#fff;
+    padding:15px 34px; font-size:14px; letter-spacing:0.05em; border:none;
+    border-radius:var(--radius); cursor:pointer;
+    transition:background .25s ease;
+  }.gw-page .submit-btn:hover{background:var(--brand-dark);}.gw-page /* ---------- FOOTER ---------- */
+  footer{background:var(--brand-dark); color:#CBD8C4; padding:60px 40px 30px;}.gw-page .footer-top{
+    max-width:1180px; margin:0 auto;
+    display:flex; justify-content:space-between; align-items:flex-start;
+    padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,0.1);
+  }.gw-page .footer-logo img{height:44px;}.gw-page .footer-links{display:flex; gap:60px;}.gw-page .footer-col h4{font-size:12px; letter-spacing:0.15em; text-transform:uppercase; color:#8FB07C; margin-bottom:16px; font-weight:500;}.gw-page .footer-col a{display:block; font-size:14px; margin-bottom:10px; color:#CBD8C4;}.gw-page .footer-col a:hover{color:#fff;}.gw-page .footer-bottom{max-width:1180px; margin:0 auto; padding-top:24px; display:flex; justify-content:space-between; font-size:12px; color:#7C9370;}.gw-page @media (max-width: 880px){
+    nav.menu{display:none;}
+    .section-head{grid-template-columns:1fr; gap:14px;}
+    .section-head .desc{justify-self:start; text-align:left;}
+    .service-grid{grid-template-columns:1fr;}
+    .checklist-row{grid-template-columns:1fr 1fr;}
+    .project-feature{grid-template-columns:1fr; gap:28px;}
+    .gallery-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr; gap:56px;}
+    .footer-top{flex-direction:column; gap:36px;}
+    .wrap, .nav{padding-left:24px; padding-right:24px;}
+    .section-pad{padding:76px 24px;}
+    .hero-inner{padding:0 24px 56px;}
+  }
+
+
+  /* ---------- LANGUAGE SWITCHER ---------- */
+  .gw-page .lang-switcher{
+    display:flex; align-items:center; gap:8px;
+    font-size:13px; letter-spacing:0.08em;
+    color:var(--ink-soft); white-space:nowrap;
+  }
+  .gw-page .lang-switcher .globe{font-size:14px; letter-spacing:0;}
+  .gw-page .lang-switcher a{color:var(--ink-soft); transition:color .25s ease;}
+  .gw-page .lang-switcher a:hover, .lang-switcher a.active{color:var(--brand); font-weight:700;}
+  .gw-page .lang-switcher span{color:var(--stone);}
+  .gw-page @media (max-width:880px){
+    .gw-page .lang-switcher{margin-left:auto; font-size:12px; gap:7px;}
+  }
+
+
+
+/* ---------- LANGUAGE SWITCHER + EASY NAVIGATION ---------- */
+.gw-page header{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+}
+.gw-page .nav-right{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.gw-page .lang-switcher{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:12px;
+  letter-spacing:.08em;
+  color:var(--ink-soft);
+  white-space:nowrap;
+}
+.gw-page .lang-switcher .globe{font-size:14px; letter-spacing:0;}
+.gw-page .lang-switcher a{color:var(--ink-soft); transition:color .25s ease;}
+.gw-page .lang-switcher a:hover,
+.gw-page .lang-switcher a.active{color:var(--brand); font-weight:700;}
+.gw-page section,
+.gw-page #services,
+.gw-page #projects,
+.gw-page #contact{
+  scroll-margin-top:96px;
+}
+.gw-page .back-to-top{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:9999;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--brand);
+  color:#fff;
+  font-size:20px;
+  box-shadow:0 10px 28px rgba(0,0,0,.18);
+  transition:background .25s ease, transform .25s ease;
+}
+.gw-page .back-to-top:hover{background:var(--brand-dark); transform:translateY(-2px);}
+@media (max-width: 880px){
+  .gw-page .nav{gap:16px; flex-wrap:wrap;}
+  .gw-page .nav-right{margin-left:auto; gap:12px;}
+  .gw-page .lang-switcher{font-size:11px;}
+  .gw-page .back-to-top{width:42px; height:42px; right:16px; bottom:16px;}
+}
+
+</style>
+</head>
+<body>
+<div class="gw-page" id="top">
+<header>
+  <div class="nav">
+    <a href="#" class="logo"><img src="../assets/images/gw-image-03-6653dfe9.png" alt="GreenWitcher"></a>
+    <nav class="menu">
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact us</a>
+    </nav>
+    <div class="lang-switcher" aria-label="Language switcher">
+      <span class="globe">🌐</span>
+      <a href="https://greenwitcher.eu/" class="active">EN</a>
+      <span>|</span>
+      <a href="https://greenwitcher.eu/sk/">SK</a>
+      <span>|</span>
+      <a href="https://greenwitcher.eu/de/">DE</a>
+    </div>
+    <a href="#contact" class="nav-cta">Begin a project</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="rule"></span> RESIDENTIAL &amp; COMMERCIAL GARDENS</div>
+    <h1>Transforming outdoor spaces into <em>vibrant, quiet gardens.</em></h1>
+    <p class="lede">GreenWitcher designs, builds, and tends gardens inspired by the discipline of Japanese landscaping — considered, seasonal, and built to age well.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Our services</a>
+      <a href="#projects" class="btn-ghost">View our projects →</a>
+    </div>
+  </div>
+</section>
+
+<section class="services section-pad" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">01</div>
+      <h2>Services</h2>
+      <div class="desc">From first sketch to seasonal upkeep — tailored care for homes and businesses alike.</div>
+    </div>
+  </div>
+  <div class="service-grid">
+    <div class="service-card">
+      <span class="mark">庭</span>
+      <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 6c-8 6-14 16-14 24a14 14 0 0 0 28 0c0-8-6-18-14-24z"/><path d="M24 20v22"/></svg>
+      <h3>Garden design</h3>
+      <p>Full landscape concepts — from dry gravel courtyards to lush residential borders — planned around light, season, and how you actually use the space.</p>
+      <a href="#" class="go">Explore design →</a>
+    </div>
+    <div class="service-card">
+      <span class="mark">水</span>
+      <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 34c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M24 6v20"/><circle cx="24" cy="6" r="3"/></svg>
+      <h3>Planting &amp; care</h3>
+      <p>Ongoing maintenance, pruning, and seasonal planting plans that keep a garden looking considered in every month of the year, not just spring.</p>
+      <a href="#" class="go">Explore care →</a>
+    </div>
+    <div class="service-card">
+      <span class="mark">石</span>
+      <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="24" cy="30" rx="16" ry="9"/><ellipse cx="24" cy="24" rx="10" ry="6"/></svg>
+      <h3>Hardscaping &amp; water</h3>
+      <p>Paths, stone arrangements, timber decking and water features — hand-set basins and ponds built with natural materials that settle into the landscape.</p>
+      <a href="#" class="go">Explore hardscaping →</a>
+    </div>
+  </div>
+  <div class="checklist-row">
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Year-round care</div>
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Seasonal specialty services</div>
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Tree &amp; shrub care</div>
+    <div class="check-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Sustainable practices</div>
+  </div>
+</section>
+
+<section class="section-pad" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">02</div>
+      <h2>Projects</h2>
+      <div class="desc">Three residential developments under year-round care, and a closer look at the garden details we tend.</div>
+    </div>
+
+    <div class="project-feature">
+      <img src="../assets/images/gw-image-04-cafe88f3.jpg" alt="Rendez residential building, Bratislava">
+      <div>
+        <div class="project-meta"><span class="tag">Residential building</span><span class="year">2023 – 2025</span></div>
+        <h3>"Rendez," Bratislava – Rača</h3>
+        <p>Full grounds care for a residential development in Bratislava's Rača district, from planting beds to shared courtyards.</p>
+        <ul class="spec-list">
+          <li><span>Location</span><span>Bratislava – Rača district</span></li>
+          <li><span>Status</span><span>2023 – 2025</span></li>
+          <li><span>Website</span><span><a href="http://rndz.sk/" target="_blank" rel="noopener">rndz.sk</a></span></li>
+        </ul>
+        <div class="feature-pills">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Year-round maintenance</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Special seasonal services</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Care for trees and shrubs</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Sustainable practices</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-feature">
+      <img src="../assets/images/gw-image-05-c968ba5b.jpg" alt="Vila Byty pri Lesíku residential building, Miloslavov">
+      <div>
+        <div class="project-meta"><span class="tag">Residential building</span><span class="year">2023 – present</span></div>
+        <h3>Vila Byty pri Lesíku, Miloslavov</h3>
+        <p>Ongoing grounds care for a residential complex in Miloslavov, tending its planting beds, lawns, and shared green spaces year-round.</p>
+        <ul class="spec-list">
+          <li><span>Location</span><span>Miloslavov</span></li>
+          <li><span>Status</span><span>2023 – ongoing</span></li>
+          <li><span>Website</span><span><a href="https://vilabyty.sk/" target="_blank" rel="noopener">vilabyty.sk</a></span></li>
+        </ul>
+        <div class="feature-pills">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Year-round maintenance</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Special seasonal services</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Care for trees and shrubs</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Sustainable practices</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-feature">
+      <img src="../assets/images/gw-image-06-38f32499.jpg" alt="Central Park Miloslavov polyfunctional building">
+      <div>
+        <div class="project-meta"><span class="tag">Polyfunctional building</span><span class="year">2023 – present</span></div>
+        <h3>Central Park, Miloslavov</h3>
+        <p>Year-round grounds maintenance for a polyfunctional building in Miloslavov, including its terraces, planting beds, and surrounding lawns.</p>
+        <ul class="spec-list">
+          <li><span>Location</span><span>Miloslavov</span></li>
+          <li><span>Status</span><span>2023 – ongoing</span></li>
+        </ul>
+        <div class="feature-pills">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Year-round maintenance</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Special seasonal services</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Care for trees and shrubs</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5L20 6"/></svg>Sustainable practices</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin:20px 0 46px; padding-top:46px; border-top:1px solid var(--stone-line);">
+      <span style="font-size:12px; letter-spacing:0.25em; text-transform:uppercase; color:var(--stone);">Garden details</span>
+    </div>
+
+    <div class="pond-banner">
+      <img src="../assets/images/gw-image-07-09d6edb7.jpg" alt="Pond before and after transformation">
+      <div class="cap">
+        <span>Residential garden — backyard pond &amp; planting</span>
+        <span class="tag">Before → After</span>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <figure>
+        <img src="../assets/images/gw-image-08-88bd1102.jpg" alt="Planting bed with stone lantern and Japanese maple">
+        <figcaption>Layered planting bed with a stone lantern and young Japanese maple.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/images/gw-image-09-4c0bba2e.jpg" alt="Lawn edge with azaleas at golden hour">
+        <figcaption>A clean lawn edge holding back azaleas and red maple at golden hour.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/images/gw-image-10-bc58d436.jpg" alt="Azalea blooms beneath a Japanese maple with stone lantern">
+        <figcaption>Azalea blooms under a maple canopy, stone lantern just beyond.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <p class="quote">"A garden is never finished — it is tended. We shape space the way water shapes stone: slowly, and with attention."</p>
+  <div class="signoff">— GREENWITCHER, GARDEN STUDIO</div>
+</section>
+
+<section class="section-pad" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="hero-eyebrow" style="color:var(--brand)"><span class="rule" style="background:var(--brand)"></span> CONTACT US</div>
+      <h2>Let's shape your garden together.</h2>
+      <p>Tell us about your space — its size, its light, and what you'd like it to feel like. We'll follow up to arrange a visit.</p>
+      <div class="info-line"><span class="label">Phone</span><span>+421 907 869 730</span></div>
+      <div class="info-line"><span class="label">Email</span><span>info@greenwitcher.eu</span></div>
+      <div class="info-line"><span class="label">Based in</span><span>Trnava Region, Slovakia</span></div>
+    </div>
+    <form onsubmit="return false;">
+      <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+      <div class="field"><label>Tell us about your garden</label><textarea rows="4" placeholder="Size, location, and what you have in mind..."></textarea></div>
+      <button class="submit-btn">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo"><img src="../assets/images/gw-image-03-6653dfe9.png" alt="GreenWitcher"></div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <a href="#">Our approach</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 GreenWitcher Garden Studio</span>
+    <span>Trnava Region, Slovakia</span>
+  </div>
+</footer>
+<a href="#top" class="back-to-top" aria-label="Back to top">&#8593;</a>
+</div>
+
+</body>
+</html>
