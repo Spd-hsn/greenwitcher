@@ -1,5 +1,8 @@
 name = "greenwitcher"
-compatibility_date = "2026-07-07"
+main = "src/index.js"
+compatibility_date = "2026-07-16"
 
 [assets]
 directory = "."
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
