@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <div class="gw-page" id="top">
@@ -195,11 +196,14 @@
       <div class="info-line"><span class="label">E-mail</span><span>info@greenwitcher.eu</span></div>
       <div class="info-line"><span class="label">S&#237;dlo</span><span>Bratislavsk&#253; kraj, Slovensko</span></div>
     </div>
-    <form onsubmit="return false;">
-      <div class="field"><label>Meno</label><input type="text" placeholder="Va&#353;e meno"></div>
-      <div class="field"><label>E-mail</label><input type="email" placeholder="vy@example.com"></div>
-      <div class="field"><label>Nap&#237;&#353;te n&#225;m o svojej z&#225;hrade</label><textarea rows="4" placeholder="Ve&#318;kos&#357;, lokalita a va&#353;a predstava..."></textarea></div>
-      <button class="submit-btn">Odosla&#357; spr&#225;vu</button>
+    <form class="contact-form" data-lang="sk">
+      <div class="field"><label>Meno</label><input type="text" name="name" autocomplete="name" maxlength="100" required placeholder="Vaše meno"></div>
+      <div class="field"><label>E-mail</label><input type="email" name="email" autocomplete="email" maxlength="254" required placeholder="vy@example.com"></div>
+      <div class="field"><label>Napíšte nám o svojej záhrade</label><textarea name="message" rows="4" minlength="10" maxlength="3000" required placeholder="Veľkosť, lokalita a vaša predstava..."></textarea></div>
+      <div class="hp-field" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAD3UXM8Ik8LOrigP" data-theme="light" aria-label="Overenie proti spamu"></div>
+      <button class="submit-btn" type="submit" data-default="Odoslať správu" data-sending="Odosielam...">Odoslať správu</button>
+      <p class="form-status" role="status" aria-live="polite" data-success="Ďakujeme! Vaša správa bola odoslaná. Čoskoro sa vám ozveme." data-error="Správu sa nepodarilo odoslať. Skúste to znova alebo nám napíšte na info@greenwitcher.eu."></p>
     </form>
   </div>
 </section>
@@ -230,5 +234,6 @@
 <a href="#top" class="back-to-top" aria-label="Sp&#228;&#357; hore">&#8593;</a>
 </div>
 
+<script src="assets/js/contact-form.js" defer></script>
 </body>
 </html>
