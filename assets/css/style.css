@@ -265,3 +265,10 @@
   .gw-page .nav-right{margin-left:auto; gap:12px;}
   .gw-page .lang-switcher{font-size:11px;}
 }
+/* Contact form functionality */
+.gw-page .hp-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;}
+.gw-page .cf-turnstile{min-height:65px;margin-top:2px;}
+.gw-page .submit-btn:disabled{opacity:.65;cursor:wait;}
+.gw-page .form-status{min-height:1.6em;margin:2px 0 0;font-size:14px;line-height:1.5;}
+.gw-page .form-status.is-success{color:var(--brand-dark);}
+.gw-page .form-status.is-error{color:#9b2c2c;}
