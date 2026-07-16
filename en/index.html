@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <div class="gw-page" id="top">
@@ -195,11 +196,14 @@
       <div class="info-line"><span class="label">Email</span><span>info@greenwitcher.eu</span></div>
       <div class="info-line"><span class="label">Based in</span><span>Bratislava Region, Slovakia</span></div>
     </div>
-    <form onsubmit="return false;">
-      <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
-      <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
-      <div class="field"><label>Tell us about your garden</label><textarea rows="4" placeholder="Size, location, and what you have in mind..."></textarea></div>
-      <button class="submit-btn">Send message</button>
+    <form class="contact-form" data-lang="en">
+      <div class="field"><label>Name</label><input type="text" name="name" autocomplete="name" maxlength="100" required placeholder="Your name"></div>
+      <div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"></div>
+      <div class="field"><label>Tell us about your garden</label><textarea name="message" rows="4" minlength="10" maxlength="3000" required placeholder="Size, location, and what you have in mind..."></textarea></div>
+      <div class="hp-field" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAAD3UXM8Ik8LOrigP" data-theme="light" aria-label="Spam protection"></div>
+      <button class="submit-btn" type="submit" data-default="Send message" data-sending="Sending...">Send message</button>
+      <p class="form-status" role="status" aria-live="polite" data-success="Thank you! Your message has been sent. We will get back to you shortly." data-error="We could not send your message. Please try again or email info@greenwitcher.eu."></p>
     </form>
   </div>
 </section>
@@ -230,5 +234,6 @@
 <a href="#top" class="back-to-top" aria-label="Back to top">&#8593;</a>
 </div>
 
+<script src="../assets/js/contact-form.js" defer></script>
 </body>
 </html>
